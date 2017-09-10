@@ -12,7 +12,7 @@ public class JdbcPoolFactory {
     //singleton
     private static JdbcTemplate jdbcTemplate;
 
-    public JdbcTemplate createMysqlJdbcPool() {
+    public final JdbcTemplate createMysqlJdbcPool() {
         if (this.jdbcTemplate != null) {
             return this.jdbcTemplate;
         }

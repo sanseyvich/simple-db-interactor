@@ -9,13 +9,14 @@ import ua.com.persistence.Persons;
 public class PersonsTest {
     public static void main(String[] args) {
         Persons valera = new Persons();
+
         valera.setAddress("Kolibabunska 100500 / 2");
         valera.setCity("Boyarka");
         valera.setFirstname("Valera");
         valera.setLastname("Babenko");
         valera.setPersonid(2l);
 
-        PersonsDao personsDao = new PersonsDao(new JdbcTemplateFactory().createMysqlJdbcPool());
+        PersonsDao personsDao = new PersonsDao(new JdbcPoolFactory().createMysqlJdbcPool());
 
         personsDao.savePersons(valera);
 
